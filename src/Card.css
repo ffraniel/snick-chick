@@ -1,0 +1,26 @@
+.Chicken-Card {
+  min-width: 300px;
+  box-shadow: 3px 3px 2px 2px #00000017;
+  background: rgba(201, 201, 238, 0.178);
+  margin: 3px;
+  border-radius: 3px;
+  flex: 1;
+
+}
+
+.Card-Highlighted {
+  border: solid lightblue 2.5px;
+}
+
+.Chicken-Name {
+
+}
+
+.Chicken-Image {
+ max-width: 298px;
+ height: 300px;
+}
+
+.Chicken-Details {
+
+}
