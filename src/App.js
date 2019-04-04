@@ -13,6 +13,7 @@ class App extends Component {
       Chickens
     };
     this.cycle = this.cycle.bind(this);
+    this.changeCurrent = this.changeCurrent.bind(this);
   }
 
   componentDidMount () {
@@ -26,16 +27,26 @@ class App extends Component {
   cycle (input) {
     if(input === 'left') {
       const newIndex = this.state.currentSelection.index - 1; 
-      this.setState({
-        currentSelection: Chickens[newIndex]
-      });
+      if ((this.state.currentSelection.index - 1) > -1) {
+        this.setState({
+          currentSelection: Chickens[newIndex]
+        });
+      }
     }
     else if (input === 'right') {
       const newIndex = this.state.currentSelection.index + 1; 
-      this.setState({
-        currentSelection: Chickens[newIndex]
-      });
+      if ((this.state.currentSelection.index + 1) <= this.state.Chickens.length -1) {
+        this.setState({
+          currentSelection: Chickens[newIndex]
+        });
+      }
     }
+  }
+
+  changeCurrent (selectionIndex) {
+    this.setState({
+      currentSelection: Chickens[selectionIndex]
+    });
   }
 
   render() {
@@ -45,7 +56,7 @@ class App extends Component {
       <div className="Snicket-App">
         <section className="header">
           <h1 className="Title">Snicket Chickens</h1>
-          <h5 className="Sub-title">The many rare breed chickens of addingham</h5>
+          <h5 className="Sub-title">The many rare breed chickens of Addingham</h5>
         </section>
         <section className="cards-slider">
           <div className="cards-slider-wrapper" style={{
@@ -53,16 +64,16 @@ class App extends Component {
           }}>
             {this.state.Chickens.map((chicken)=>{
               if (chicken.breed === this.state.currentSelection.breed) {
-                return (<Card chicken={chicken} highlighted={true} key={chicken.breed} />);    
+                return (<Card chicken={chicken} highlighted={true} key={chicken.breed} changeCurrent={this.changeCurrent} />);    
               } else {
-                return (<Card chicken={chicken} highlighted={false} key={chicken.breed} />);    
+                return (<Card chicken={chicken} highlighted={false} key={chicken.breed} changeCurrent={this.changeCurrent} />);    
               };
             })}
           </div>
         </section>
         <section className="buttons">
-          <button className="cycle-button left-button" onClick={()=>{this.cycle('left')}}>Left</button>
-          <button className="cycle-button right-button" onClick={()=>{this.cycle('right')}}>Right</button>
+          <button className="cycle-button" onClick={()=>{this.cycle('left')}}>L</button>
+          <button className="cycle-button" onClick={()=>{this.cycle('right')}}>R</button>
         </section>
       </div>
     );
