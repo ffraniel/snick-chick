@@ -1,12 +1,11 @@
 body {
   overflow-x: hidden;
-
+  font-family: 'Quando', serif;
 }
 
 .Snicket-App {
   max-width: 90%;
   margin: 0 auto;
-  font-family: Arial, Helvetica, sans-serif;
   }
 
 .header {
@@ -27,32 +26,25 @@ body {
   margin: 0 auto;
   display: flex;
   transition: transform 300ms cubic-bezier(0.5, 0.03, 0.5, 0.9);
-
 }
 
 .buttons {
-  margin-top: 600px;
+  margin-top: 580px;
   width: 100%;
   text-align: center;
+  padding: 10px 0;;
 }
 
 .cycle-button {
-  box-shadow: (2px 2px 2px 2px grey);
-
+  box-shadow: 3px 3px 2px 2px #00000017;
+  background: rgba(69, 69, 73, 0.623);
+  border: none;
+  border-radius: 1px;
+  margin: 5px;
+  padding: 5px 10px
 }
 
 .cycle-button:hover {
   background-color: grey;
-  transition: background-color 300ms linear;
+  transition: background-color 100ms linear;
 }
-
-/* .cycle-button .left-button {
-  top: 50%;
-  left: 10%;
-}
-
-.cycle-button .right-button {
-  top: 50%;
-  right: -10%;
-} */
-
