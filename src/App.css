@@ -16,20 +16,43 @@ body {
 
 .cards-slider {
   position: relative;
-  max-width: 300px;
+  max-width: 250px;
   margin: 0 auto;
 }
-
 
 .cards-slider-wrapper {
   position: absolute;
   text-align: center;
   height: auto;
   margin: 0 auto;
-  width: 300px;
   display: flex;
+  transition: transform 300ms cubic-bezier(0.5, 0.03, 0.5, 0.9);
+
+}
+
+.buttons {
+  margin-top: 600px;
+  width: 100%;
+  text-align: center;
 }
 
 .cycle-button {
-  height: auto;
+  box-shadow: (2px 2px 2px 2px grey);
+
 }
+
+.cycle-button:hover {
+  background-color: grey;
+  transition: background-color 300ms linear;
+}
+
+/* .cycle-button .left-button {
+  top: 50%;
+  left: 10%;
+}
+
+.cycle-button .right-button {
+  top: 50%;
+  right: -10%;
+} */
+

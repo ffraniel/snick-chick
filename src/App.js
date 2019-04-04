@@ -20,7 +20,7 @@ class App extends Component {
       this.setState({
         loading: false
       })
-    }, 250)
+    }, 150)
   }
 
   cycle (input) {
@@ -36,7 +36,6 @@ class App extends Component {
         currentSelection: Chickens[newIndex]
       });
     }
-    console.log("cycle, ", input)
   }
 
   render() {
@@ -49,7 +48,9 @@ class App extends Component {
           <h5 className="Sub-title">The many rare breed chickens of addingham</h5>
         </section>
         <section className="cards-slider">
-          <div className="cards-slider-wrapper">
+          <div className="cards-slider-wrapper" style={{
+            'transform': `translateX(-${this.state.currentSelection.index * (100 / this.state.Chickens.length) }%)`
+          }}>
             {this.state.Chickens.map((chicken)=>{
               if (chicken.breed === this.state.currentSelection.breed) {
                 return (<Card chicken={chicken} highlighted={true} key={chicken.breed} />);    
@@ -58,6 +59,10 @@ class App extends Component {
               };
             })}
           </div>
+        </section>
+        <section className="buttons">
+          <button className="cycle-button left-button" onClick={()=>{this.cycle('left')}}>Left</button>
+          <button className="cycle-button right-button" onClick={()=>{this.cycle('right')}}>Right</button>
         </section>
       </div>
     );
