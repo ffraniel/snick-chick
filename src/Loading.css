@@ -1,5 +1,12 @@
 .Loading {
   text-align: center;
+  color: rgb(73, 76, 73);
+  box-shadow: 3px 3px 2px 2px #00000017;
+  background: rgba(252, 255, 254, 1);
+  width: 30%;
+  padding: 1px 0px;
+  margin: 5px auto;
+  border-radius: 5px;
 }
 
 .Loading h1 {

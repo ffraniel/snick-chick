@@ -21,7 +21,7 @@ class App extends Component {
       this.setState({
         loading: false
       })
-    }, 150)
+    }, 650)
   }
 
   cycle (input) {

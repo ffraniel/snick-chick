@@ -1,16 +1,46 @@
 body {
   overflow-x: hidden;
   font-family: 'Quando', serif;
+  background-color: #c7f0ff;
+  background-color: #b9a056;
+  background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffbf8d' fill-opacity='1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  /* background-color: rgb(176, 219, 194); */
 }
 
 .Snicket-App {
-  max-width: 90%;
-  margin: 0 auto;
+  /* max-width: 90%; */
+  /* margin: 0 auto; */
   }
 
 .header {
-  text-align: center;
+  /* text-align: center; */
+  color: rgb(37, 88, 37);
+  color: #23ffbf8d;
+  color: #bfe0c5;
+  box-shadow: 3px 3px 2px 2px #00000017;
+  background: rgb(219, 221, 85);
+  background: rgb(64, 140, 73);
+  width: 100%;
+  /* padding: 1px 0px; */
+  /* margin: 5px auto; */
+  /* border-radius: 5px; */
+  position: sticky;
+  top: 0;
+  margin: 0 0 10px 0
 
+}
+
+.header .Title {
+  display: inline-block;
+  margin-left: 20px;
+  color: #f0ea80;
+}
+
+.header .Sub-title {
+  display: inline-block;
+  float: right;
+  margin-right: 20px;
+  color: #f0ea80;
 }
 
 .cards-slider {
@@ -32,7 +62,9 @@ body {
   margin-top: 580px;
   width: 100%;
   text-align: center;
-  padding: 10px 0;;
+  padding: 10px 0;
+  font-family: 'Quando', serif;
+  
 }
 
 .cycle-button {
@@ -41,10 +73,11 @@ body {
   border: none;
   border-radius: 1px;
   margin: 5px;
-  padding: 5px 10px
+  padding: 5px 10px;
+  color: white;
+  transition: background-color 100ms linear;
 }
 
 .cycle-button:hover {
-  background-color: grey;
-  transition: background-color 100ms linear;
+  background-color: rgb(36, 34, 34);
 }
